@@ -9,7 +9,7 @@ import org.springframework.core.io.ClassPathResource;
 import com.nt.controller.MainController;
 import com.nt.vo.StudentVo;
 
-public class Client {
+public class Client{
  
    public static void main(String[] args) {
    BeanFactory factory=null;  
