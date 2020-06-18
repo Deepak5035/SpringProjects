@@ -1,0 +1,17 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+
+   <!-- Dependency beans-->
+   <bean id="gPay" class="com.nt.beans.GooglePay"/>
+   <bean id="pPay" class="com.nt.beans.PhonePay"/>
+   <bean id="pytm" class="com.nt.beans.Paytm"/>
+   
+   <!-- Target beans -->
+   <bean id="amz" class="com.nt.beans.Amazon">
+   <property name="paymentGateway" ref="pytm"/>
+   </bean>
+
+</beans>
