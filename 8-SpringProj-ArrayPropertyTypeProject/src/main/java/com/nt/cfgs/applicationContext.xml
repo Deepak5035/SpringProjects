@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean id="sysdate" class="java.util.Date"></bean>
+	<bean id="dob" class="java.util.Date">
+		<property name="date" value="12" />
+		<property name="month" value="11" />
+		<property name="year" value="94" />
+	</bean>
+
+
+	<bean id="stu" class="com.nt.beans.student">
+		<property name="marks">
+			<array>
+				<value>50</value>
+				<value>67</value>
+				<value>93</value>
+			</array>
+		</property>
+		<property name="date">
+			<array>
+				<ref bean="dob" />
+				<ref bean="sysdate" />
+			</array>
+		</property>
+	</bean>
+</beans>
