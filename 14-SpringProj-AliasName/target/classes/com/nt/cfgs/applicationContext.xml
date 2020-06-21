@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+
+	<bean id="com.nt.student.StudentRegistration" name="sr,dResgister" class="com.nt.student.StudentRegistration">
+		<property name="name" value="Deepak" />
+		<property name="rollno" value="1413340061" />
+		<property name="collageName" value="NIET" />
+		<property name="branch" value="ME" />
+		<property name="address" value="Gkp" />
+		<property name="gender" value="Male" />
+	</bean>
+	
+	<alias name="com.nt.student.StudentRegistration" alias="student1"/>
+	<alias name="com.nt.student.StudentRegistration" alias="Deepak"/>
+	<alias name="com.nt.student.StudentRegistration" alias="stu1"/>
+	
+<!-- 
+    <bean class="com.nt.student.StudentRegistration" >
+    	<property name="name" value="Imroz" />
+		<property name="rollno" value="1413340081" />
+		<property name="collageName" value="NIET" />
+		<property name="branch" value="ME" />
+		<property name="address" value="Vns" />
+		<property name="gender" value="Male" />
+    
+    </bean>
+ -->
+
+</beans>
+
+
