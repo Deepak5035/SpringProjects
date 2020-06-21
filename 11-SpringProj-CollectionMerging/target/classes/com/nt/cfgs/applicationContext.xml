@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+
+     <!-- baseBean configuration -->
+	
+	 <bean id="basebean" class="com.nt.beans.CollegeSubject"
+		abstract="true">
+		<property name="subject">
+			<list>
+				<value>HumanValue</value>
+			</list>
+		</property>
+	 </bean>
+
+
+	<bean id="ME" parent="basebean">   <!--parent bean class taken as child by default if chile bean not given  -->
+		<property name="subject">
+			<list merge="true">        <!--  Apply merge tag with value true to enable collection merging-->  
+				<!-- <value>HumanValue</value> -->
+				<value>Mechanics</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="EC" class="com.nt.beans.CollegeSubject"
+		parent="basebean">
+		<property name="subject">
+			<list merge="true">
+				<!-- <value>HumanValue</value> -->
+				<value>Electronics</value>
+			</list>
+		</property>
+	</bean>
+
+
+</beans>
