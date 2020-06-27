@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="constructor" default-autowire-candidates="false"   xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<!--  change XSD version 4.3 to 2.5 for autodetect  -->
+	
+	<bean id="plan" class="com.nt.beans.TourPlan" autowire-candidate="default">
+		<property name="place">
+			<list>
+				<value>Shimla</value>
+				<value>Manali</value>
+				<value>Rishkesh</value>
+				<value>goa</value>
+			</list>
+		</property>
+	</bean>
+	
+		<bean id="plan2" class="com.nt.beans.TourPlan" primary="true">
+		<property name="place">
+			<list>
+				<value>gkp</value>
+				<value>lku</value>
+				<value>vns</value>
+				<value>kanpur</value>
+			</list>
+		</property>
+	</bean>
+
+
+<!--   <bean id="ta" class="com.nt.beans.TravelAgent" autowire="byName"/> -->
+  
+<!--   <bean id="ta" class="com.nt.beans.TravelAgent" autowire="byType"/> -->
+       
+<!--   <bean id="ta" class="com.nt.beans.TravelAgent" autowire="constructor"/>  -->
+  
+<!--   <bean id="ta" class="com.nt.beans.TravelAgent" autowire="autodetect"/> -->
+
+       <bean id="ta" class="com.nt.beans.TravelAgent" autowire="default"/>  
+
+
+</beans>
