@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	
+<!-- 	single tone class with prototype scope -->
+	<bean id="st" class="com.nt.beans.SingletoneClass" scope="prototype"/>
+	
+	<bean id="ca" class="com.nt.beans.CricketActivity" scope="singleton"/>
+	
+	<bean id="cv" class="com.nt.beans.CricektVO" scope="prototype"/>
+
+</beans>
+
+
