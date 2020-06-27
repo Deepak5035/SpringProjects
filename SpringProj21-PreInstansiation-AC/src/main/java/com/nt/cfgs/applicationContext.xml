@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="false" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	
+	<bean id="dob" class="java.util.Date" scope="prototype">
+	<property name="year" value="94"/>
+	<property name="date" value="12"/>
+	<property name="month" value="10"/>
+	</bean>
+	
+
+	<!-- Bean configuration -->
+	
+	<bean id="stu" class="com.nt.student.StudentRegistration" >
+		<constructor-arg value="Deepak" />
+		<constructor-arg value="1413340061" />
+		<constructor-arg value="NIET"/>
+		<constructor-arg value="ME" />
+		<constructor-arg value="gkp" />
+		<constructor-arg value="ME"/>
+		<constructor-arg ref="dob"/>
+
+		
+	</bean>
+</beans>
+
+
