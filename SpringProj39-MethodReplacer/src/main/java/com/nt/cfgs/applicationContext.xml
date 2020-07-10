@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<bean id="cr" class="com.nt.beans.CalculateReplacer">
+  <constructor-arg name="number1" value="5"/>
+  <constructor-arg name="number2" value="3"/>
+</bean>
+
+<bean id="cal"  class="com.nt.beans.Bank">
+<replaced-method name="Calculation" replacer="cr"/>
+
+</bean>
+
+</beans>
