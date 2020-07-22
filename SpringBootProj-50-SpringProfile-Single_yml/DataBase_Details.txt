@@ -1,0 +1,4 @@
+dev==>MySql,apach dbcp2
+testing===>MySql,Hikari cp
+uap(user acceptance test)===>Oracle,c3p0
+prod===>Oracle,Hikari cp
